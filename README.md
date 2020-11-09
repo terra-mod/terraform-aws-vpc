@@ -42,9 +42,9 @@ behavior can be disabled by passing the `use_nat_gateways` input as `false`.
        cidr = "10.0.0.0/16"
        
        region = "us-west-2"
-       // you can manually specify subnets, or just use the availability_zone_count
        
-       availability_zones = ["us-west-2a", "us-west-2b"]
+       // you can manually specify subnets, or just use the availability_zone_count
+       availability_zone_count = 2
        
        // provision each external subnet with 256 ip addresses (/24)
        external_subnets = [256]
@@ -66,7 +66,8 @@ behavior can be disabled by passing the `use_nat_gateways` input as `false`.
        
        cidr = "10.0.0.0/16"
        
-       availabilty_zone_count = 3
+       // you can manually specify subnets, or just use the availability_zone_count
+       availability_zones = ["us-west-2a", "us-west-2b", "us-west-2c"]
        
        // provision three external subnets with 256 ip addresses each (/24)
        external_subnets = [256]
