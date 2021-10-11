@@ -43,7 +43,7 @@ locals {
 
   // Determine the count of Availability Zones that will be used either from the explicit list or a count from the
   // default available zones.
-  zone_count = length(var.availability_zones) > 0 ? length(var.availability_zones) : var.availabilty_zone_count
+  zone_count = length(var.availability_zones) > 0 ? length(var.availability_zones) : var.availability_zone_count
 
   // Separate the subnets out for easier looping below
   external_subnets = [ for n, cidr in module.cidr_blocks.network_cidr_blocks : cidr if substr(n, 0, 8) == "external" ]
