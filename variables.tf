@@ -40,7 +40,7 @@ variable availability_zones {
   default     = []
 }
 
-variable availabilty_zone_count {
+variable availability_zone_count {
   description = <<DESC
 Selects a given number of Availability Zones from the specified Region. Then variable is ignored when a explicit list
 of Availability Zones are provided.
